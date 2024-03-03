@@ -6,7 +6,7 @@
 /*   By: mvelazqu <mvelazqu@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/04 20:58:03 by mvelazqu          #+#    #+#             */
-/*   Updated: 2024/02/04 21:49:45 by mvelazqu         ###   ########.fr       */
+/*   Updated: 2024/03/03 19:17:56 by mvelazqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,10 +65,10 @@ void	get_lst_to_line(t_line *lst, char *line, int buffsize)
 char	*get_next_line(int fd)
 {
 	char			*line;
-	static t_line	*lst_line[1024];
+	static t_line	*lst_line[OPEN_MAX];
 	int				buffsize;
 
-	if (fd < 0 || BUFFER_SIZE <= 0 || fd >= 1024)
+	if (fd < 0 || BUFFER_SIZE <= 0 || fd >= OPEN_MAX)
 		return (NULL);
 	buffsize = 0;
 	get_linefd_to_lst(fd, &lst_line[fd], &buffsize);

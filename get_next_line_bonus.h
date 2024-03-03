@@ -6,7 +6,7 @@
 /*   By: mvelazqu <mvelazqu@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/04 20:57:22 by mvelazqu          #+#    #+#             */
-/*   Updated: 2024/02/04 21:00:03 by mvelazqu         ###   ########.fr       */
+/*   Updated: 2024/03/03 19:17:12 by mvelazqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+# include <limits.h>
 
 # define FREE_ALL 69
 # define KEEP_LAST 10
